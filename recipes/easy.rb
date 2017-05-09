@@ -16,11 +16,7 @@ package "git" do
   action :install
 end
 
-easy_install_package "greenlet" do
-  action :install
-end
+python_package "greenlet" 
 
-easy_install_package "gevent" do
-  action :install
-end
+python_package "gevent" 
 

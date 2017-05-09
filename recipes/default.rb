@@ -14,9 +14,7 @@ package "libevent-dev" do
   action :install
 end
 
-easy_install_package "greenlet" do
-  action :install
-end
+python_package "greenlet" 
 
 
 bash "install_gevent_pip" do
