@@ -16,7 +16,12 @@ package "git" do
   action :install
 end
 
-python_package "greenlet" 
 
-python_package "gevent" 
-
+bash "install_greenlet" do
+  user "root"
+  code <<-EOH
+    pip install greenlet
+    pip install gevent
+  EOH
+  action :run
+end
