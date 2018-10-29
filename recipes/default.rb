@@ -14,7 +14,14 @@ package "libevent-dev" do
   action :install
 end
 
-python_package "greenlet" 
+
+bash "install_greenlet" do
+  user "root"
+  code <<-EOH
+    pip install greenlet
+  EOH
+  action :run
+end
 
 
 bash "install_gevent_pip" do
